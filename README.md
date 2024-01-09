@@ -1,6 +1,8 @@
-# TaskTrack
+# TaskTrack SaaS platform
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.11.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.11 and node version 6.
+
+In this project, HTML/CSS/Javascript/Angular/Json are required to use with basic tools of injection, directive, double-binding, router, and rxjs to build a real life task tracking application.
 
 ## Development server
 
