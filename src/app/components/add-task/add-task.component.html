@@ -1,0 +1,38 @@
+<form *ngIf="showAddTask" class="add-form" (ngSubmit)="onSubmit()" >
+    <div class="form-control">
+        <label for="text">Task</label>
+        <input type="text" name="task" [(ngModel)]="text" id="text" placeholder="Add Task">
+    </div>
+    <div class="form-control">
+        <label for="day">Day & Time</label>
+        <input type="text" name="day" [(ngModel)]="day" id="day" placeholder="Add Day & Time" />
+    </div>
+    <div class="form-control form-control-check">
+        <label for="reminder">Reminder</label>
+        <input 
+        type="checkbox" 
+        name="reminder" 
+        [(ngModel)]="reminder" 
+        id="reminder"/>
+    </div>
+    <input type="submit" value="Save Task" class="btn btn-block" />
+</form>
+
+
+<!-- 
+1. 标签和输入关联：label标签用于可访问性和可用性。
+label标签中的for属性应与相应输入字段的id匹配。
+这允许屏幕阅读器和其他辅助技术将标签与正确的输入字段相关联，
+还允许用户通过单击标签来关注输入字段。
+
+2. 输入类型：输入标签（text、checkbox等）中的type属性定义了控件的类型及其在表单中的行为方式。
+例如，type="text"创建一个文本框，而type="checkbox"创建一个复选框。
+
+3. 与[(ngModel)]的数据绑定：[(ngModel)]绑定（text、day、reminder）中使用的名称是指Angular组件类中的属性。
+这些属性是表单数据存储的地方。
+它们不必匹配标签文本或输入类型；
+它们只需要对应于组件类中定义的属性，这些属性将保存表单输入值。
+
+4. 表单提交：当表单提交时，绑定到这些属性（text、day、reminder）的数据
+可以轻松访问或发送到服务器，因为它们代表表单的当前状态。 
+-->

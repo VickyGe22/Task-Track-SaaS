@@ -1,0 +1,11 @@
+<div [ngClass]="{reminder: task.reminder}" class="task" (dblclick)="onToggle(task)">
+    <h3>{{task.text}}
+        <fa-icon (click)="clickDelete(task)" [ngStyle]="{'color':'grey'}" [icon]="faTime"></fa-icon>
+    </h3>
+    <p>{{task.day}}</p>
+</div>
+
+
+<!-- [ngClass] 指令被用来根据 task.reminder 的值 添加或移除 reminder 这个 CSS 类。
+如果 task.reminder 的值为 true，那么 reminder 类会被添加到这个 div 元素上。
+如果 task.reminder 的值为 false 或 undefined，那么 reminder 类不会被添加。 -->
